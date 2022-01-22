@@ -47,3 +47,66 @@
 			}
 		}
     }
+// Koristim za predstave
+public function fetch(){
+    $data = null;
+
+    $query="select p.id,p.pozoriste,p.naziv,p.zanr, p.mesta, poz.naziv as NazivPozorista from predstave p join pozoriste poz on p.pozoriste=poz.id";
+    if ($sql = $this->conn->query($query)) {
+        while ($row = mysqli_fetch_assoc($sql)) {
+            $data[] = $row;
+        }
+    }
+    return $data;
+}
+
+public function delete($id){
+
+    $query = "DELETE FROM predstave where id = '$id'";
+    if ($sql = $this->conn->query($query)) {
+        return true;
+    }else{
+        return false;
+    }
+}
+
+// Koristim za read
+public function fetch_single($id){
+
+    $data = null;
+
+    $query="select p.id,p.pozoriste,p.naziv,p.zanr, p.mesta, poz.naziv as NazivPozorista from predstave p join pozoriste poz on p.pozoriste=poz.id
+        WHERE p.id ='$id'";
+    if ($sql = $this->conn->query($query)) {
+        while ($row = $sql->fetch_assoc()) {
+            $data = $row;
+        }
+    }
+    return $data;
+}
+//Koristim za edit
+public function edit($id){
+
+    $data = null;
+
+    $query = "SELECT * FROM predstave WHERE id = '$id'";
+    if ($sql = $this->conn->query($query)) {
+        while($row = $sql->fetch_assoc()){
+            $data = $row;
+        }
+    }
+    return $data;
+}
+//Koristim kod edit isto
+public function update($data){
+
+    $query = "UPDATE predstave SET pozoriste='$data[pozoriste]', naziv='$data[naziv]', zanr='$data[zanr]', mesta='$data[mesta]' WHERE id='$data[id] '";
+
+    if ($sql = $this->conn->query($query)) {
+        return true;
+    }else{
+        return false;
+    }
+}
+}
+?>
