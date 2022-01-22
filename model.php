@@ -46,7 +46,9 @@
 				}
 			}
 		}
-    }
+    
+    
+
 // Koristim za predstave
 public function fetch(){
     $data = null;
