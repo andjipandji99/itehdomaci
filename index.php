@@ -63,7 +63,7 @@
               ?>
             
               </select>
-            </div class="form-group" style="color: #ffffcc; font-weight:bold;">
+              <div class="form-group" style="color: #ffffcc; font-weight:bold;">
               <label for="">Naziv predstave</label>
               <input type="text" name="naziv" class="form-control">
             </div>
