@@ -10,7 +10,7 @@
 
     <title>Pozorisne predstave</title>
   </head>
-  <body style="background-image: url('zavesa.jpg'); background-repeat: no-repeat; background-position: center;background-size: cover;">
+  <body style="background-image: url('zavesa.jpeg'); background-repeat: no-repeat; background-position: center;background-size: cover;">
     <div class="container">
       <div class="row">
         <div class="col-md-12 mt-5">

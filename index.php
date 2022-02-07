@@ -10,7 +10,7 @@
 
     <title>Pozorisne predstave</title>
   </head>
-  <body style="background-image: url('zavesa.jpg'); background-repeat: no-repeat; background-position: center;background-size: cover;">
+  <body style="background-image: url('zavesa.jpeg'); background-repeat: no-repeat; background-position: center;background-size: cover;">
   <ul class="nav justify-content-end">
   <li class="nav-item">
     <a class="nav-link active" href="index.php">Dodavanje</a>
@@ -61,9 +61,9 @@
               <?php
               }}
               ?>
-              ?>
+            
               </select>
-            </div> ="form-group" style="color: #ffffcc; font-weight:bold;">
+            </div class="form-group" style="color: #ffffcc; font-weight:bold;">
               <label for="">Naziv predstave</label>
               <input type="text" name="naziv" class="form-control">
             </div>
